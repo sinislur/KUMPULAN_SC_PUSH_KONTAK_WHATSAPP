@@ -1,8 +1,3 @@
-///
-
-require("http").createServer((_, res) => res.end("Uptime!")).listen(8080)
-
-///
 
 ///
 
@@ -10,7 +5,6 @@ process.on('uncaughtException', console.error)
 
 ///
 
-    
 require(`./config.js`)
 const { default: makeWASocket, DisconnectReason, downloadContentFromMessage, useSingleFileAuthState, jidDecode, areJidsSameUser, makeInMemoryStore } = require('@adiwajshing/baileys')
 const { state } = useSingleFileAuthState('./session.json')
@@ -84,7 +78,7 @@ client.user :
 return (withoutContact ? '' : v.name) || v.subject || v.verifiedName || PhoneNumber('+' + jid.replace('@s.whatsapp.net', '')).getNumber('international')
 }
 
-client.public = false
+client.public = true
 
 client.downloadAndSaveMediaMessage = async (message, filename, attachExtension = true) => {
 let quoted = message.msg ? message.msg : message
