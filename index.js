@@ -1,3 +1,16 @@
+///
+
+require("http").createServer((_, res) => res.end("Uptime!")).listen(8080)
+
+///
+
+///
+
+process.on('uncaughtException', console.error)
+
+///
+
+    
 require(`./config.js`)
 const { default: makeWASocket, DisconnectReason, downloadContentFromMessage, useSingleFileAuthState, jidDecode, areJidsSameUser, makeInMemoryStore } = require('@adiwajshing/baileys')
 const { state } = useSingleFileAuthState('./session.json')
